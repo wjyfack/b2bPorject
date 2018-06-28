@@ -63,6 +63,9 @@
   border-top: 1px solid #f6f6f9;
   padding: 0.5rem 0;
 }
+.footer-nav .nav-list i {
+  font-size: 1.35rem;
+}
 .footer-nav .nav-list {
   font-size: .8rem;
   display: block;
@@ -99,7 +102,7 @@
   -webkit-transform: rotate(45deg);
   -o-transform: rotate(45deg);
 }
-.fot-more-img {position: absolute;top:-1.5rem;left: 50%;transform: translateX(-50%);}
+.fot-more-img {position: absolute;top:-1.25rem;left: 50%;transform: translateX(-50%);}
 .fot-more-img img{padding: 0.02rem;width: 2.5rem;height: 2.5rem;background: #fff; border-radius: 1.36rem;margin: 0 auto;-webkit-box-shadow: 0px -0.05rem 0.1rem #EEEEEE;box-shadow: 0px -0.05rem 0.1rem #EEEEEE;border-radius: 50%;}
 .fot-more-roate img{transform: rotate(45deg);-ms-transform: rotate(45deg);-moz-transform: rotate(45deg);-webkit-transform: rotate(45deg);-o-transform: rotate(45deg);}
 .nav-post {

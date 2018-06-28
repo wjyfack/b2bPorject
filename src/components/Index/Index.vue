@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="mar-t-04">
     <div class="nav-header">
       <div class="nav-cont">
         <div class="nav-add">佛山<i class="el-icon-arrow-down"></i></div>
-        <div class="nav-input"><el-input placeholder="商品/店铺搜索"></el-input></div>
-        <div class="nav-notice" :class=""><i class="el-icon-bell"></i></div>
+        <div class="nav-input"><el-input  prefix-icon="el-icon-search" placeholder="商品/店铺搜索"></el-input></div>
+        <div class="nav-notice"><el-badge is-dot :hidden="false"><i class="el-icon-bell"></i></el-badge> </div>
       </div>
     </div>
     <Carousel></Carousel>
@@ -28,7 +28,33 @@
               <img class="img-al" src="http://placehold.it/100x100">
             </div>
         </li>
-
+        <li class="article-list-other">
+          <div class="content">
+            <div class="hd">标题</div>
+            <div class="read">阅读量： 999&nbsp;&nbsp;&nbsp;&nbsp;分类</div>
+          </div>
+          <div class="img-list">
+            <img class="img-al" src="http://placehold.it/100x100">
+          </div>
+        </li>
+        <li class="article-list-other">
+          <div class="content">
+            <div class="hd">标题</div>
+            <div class="read">阅读量： 999&nbsp;&nbsp;&nbsp;&nbsp;分类</div>
+          </div>
+          <div class="img-list">
+            <img class="img-al" src="http://placehold.it/100x100">
+          </div>
+        </li>
+        <li class="article-list-other">
+          <div class="content">
+            <div class="hd">标题</div>
+            <div class="read">阅读量： 999&nbsp;&nbsp;&nbsp;&nbsp;分类</div>
+          </div>
+          <div class="img-list">
+            <img class="img-al" src="http://placehold.it/100x100">
+          </div>
+        </li>
       </ul>
     </div>
     <footer-nav></footer-nav>
@@ -48,15 +74,20 @@
 </script>
 
 <style scoped>
+  .mar-t-04 {
+    margin: 3.5rem 0;
+  }
 .nav-header {
   position:fixed;
   top:0;
   left: 0;
   right: 0;
   width:100%;
-
+  z-index: 22;
 }
-.nav-header .nav-cont {
+  .el-input .el-input__inner {
+    height: 35px;}
+  .nav-header .nav-cont {
   display:flex;
   align-self: center;
   justify-content: space-between;
@@ -67,8 +98,10 @@
 .nav-header .nav-add{padding: 0 .5rem;
   align-self: center;}
 .nav-header .nav-input{flex: 1;}
-.nav-header .nav-notice {padding: 0 .5rem;align-self:center;}
-.nav-list .nav-list-ul {
+
+  .nav-header .nav-notice {padding: 0 1rem 0 .5rem;align-self:center;}
+  .nav-header .nav-notice i {font-size:1.2rem;}
+  .nav-list .nav-list-ul {
   list-style-type: none;
   width:100%;
   display:flex;

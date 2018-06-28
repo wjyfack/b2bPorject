@@ -6,7 +6,7 @@
       <section class="search box ts-3">
        <div class="text-all position-rel dis-box j-text-all">
 
-         <div class="dis-box search-logo-up"><div class="onelist-hidden" id="j-lbs-city"><img src="http://placehold.it/100x100"></div></div>
+         <div class="dis-box search-logo-up"><div class="onelist-hidden" id="j-lbs-city"><img src="../../assets/images/logo.jpg"></div></div>
 
          <div class="box-flex input-text bg-w">
            <a href="" class="a-search-input"></a>
@@ -34,9 +34,9 @@
             <div class="img-list"><img src="http://placehold.it/100x100"></div>
 
           </div>
-          <div class="dis-box add-box f-03 bord-b">
-            <span><img src="">求购量：<span class="col-red"></span> </span>
-            <span>已报价<span class="col-red"></span>条</span>
+          <div class="dis-box add-box bord-b">
+            <span><img src="../../assets/images/demand.png">求购量：<span class="col-red">123</span> </span>
+            <span>已报价<span class="col-red">123</span>条</span>
           </div>
           <div class="dis-box add-box f-03">
             <span class="col-9">联系人：<span class="col-3">contact_name</span> </span>
@@ -71,8 +71,9 @@
 </script>
 
 <style scoped>
+  .article_info {margin-top:3.5rem;}
   .box-flex {display:flex;}
-  .dis-box-j {display:flex; width:100%;justify-content: space-between;}
+  .dis-box-j {display:flex; width:100%;justify-content: space-between;padding: .5rem 0;}
   .col-r {color: red; font-weight: 500;}
   .p-05 {padding: .5rem 0;}
   .text-conter {text-align: center;}
@@ -90,8 +91,8 @@
   .sear-side a{display: flex;flex-direction: column;align-items: center;justify-content: center;color: #ffffff;padding: 0 .5rem;}
   .top-50 {margin-top: 5rem;}
   .add-box {display:flex; align-items: center;justify-content: space-between; padding:.5rem 0;}
-  .bord-b {border-bottom: 1px dashed #636363;}
-  .bord-b img{width: 2rem; margin-right: 1rem;}
+  .bord-b {border-bottom: 1px dashed #636363; color: #333;}
+  .bord-b img{width: 1rem; margin-right: .5rem;vertical-align:bottom;}
   .col-red {color: #ff1800;}
   .bord-piont {background-color: #0e6eb8; color: #FFFFFF; padding: .2rem 0; padding-right: 1rem;  }
   .element{

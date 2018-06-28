@@ -22,4 +22,7 @@ export default {
 
 }
   a{text-decoration: none;}
+  .col-3 {color: #333333;}
+  .col-6 {color: #666666;}
+  .col-9 {color: #999999;}
 </style>
