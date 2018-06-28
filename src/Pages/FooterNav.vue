@@ -1,26 +1,52 @@
 <template>
-  <footer class="footer-nav dis-box" id="footer-nav">
-    <a href="" class="box-flex nav-list active">
-      <i class="nav-box i-home"></i><span>首页</span>
-    </a>
-    <a href="" class="box-flex nav-list">
-      <i class="nav-box i-cate"></i><span>求购</span>
-    </a>
-    <a href="" class="box-flex nav-list">
-      <div class="fot-more-img"><img src="__PUBLIC__/img/more.png"><div class="fot-more">更多</div></div>
-    </a>
-    <a href="" class="box-flex position-rel nav-list">
-      <i class="nav-box i-flow"></i><span>资讯</span>
-    </a>
-    <a href="" class="box-flex nav-list">
-      <i class="nav-box i-user"></i><span>我</span>
-    </a>
-  </footer>
-</template>
+  <div>
+    <transition name="el-zoom-in-bottom">
+      <div class="nav-list nav-post"  v-show="isShow">
+        <ul class="nav-list-ul">
+          <li class="nav-list-item">
+            <img src="http://placehold.it/100x100" alt="">
+            <span>店铺街</span>
+          </li>
+        </ul>
+      </div>
+    </transition>
 
+    <footer class="footer-nav dis-box" id="footer-nav">
+      <router-link to="/" class="box-flex nav-list active">
+        <i class="el-icon-menu"></i><span>首页</span>
+      </router-link>
+      <router-link to="/demand" class="box-flex nav-list">
+        <i class="el-icon-news"></i><span>求购</span>
+      </router-link>
+      <a href="javascript:void(0);" class="box-flex nav-list">
+        <div class="fot-more-img" :class="{'fot-more-roate':isActive}" @click="moreActive"><img src="./../assets/more.png"><div>更多</div></div>
+      </a>
+      <a href="" class="box-flex position-rel nav-list">
+        <i class="el-icon-goods"></i><span>资讯</span>
+      </a>
+      <router-link to="/my" class="box-flex nav-list">
+        <i class="el-icon-service"></i><span>我</span>
+      </router-link>
+    </footer>
+  </div>
+
+</template>
 <script>
     export default {
-        name: "FooterNav"
+      name: "FooterNav",
+      data: function () {
+        return {
+          isShow: false,
+          isActive: false
+        };
+      },
+      methods: {
+        moreActive: function(){
+          this.isActive = !this.isActive;
+          this.isShow   = !this.isShow;
+        }
+      }
+
     }
 </script>
 
@@ -35,15 +61,23 @@
   z-index: 11;
   box-shadow: 1px 5px 15px rgba(50,50,50,0.3);
   border-top: 1px solid #f6f6f9;
-  padding: 0.3rem 0;
+  padding: 0.5rem 0;
 }
 .footer-nav .nav-list {
-  font-size: 1.1rem;
+  font-size: .8rem;
   display: block;
   text-align: center;
   padding-top: 0rem;
   color: #595959;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+.footer-nav .nav-list.active {
+  color:#0e6eb8;
+}
+
 .box-flex {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -57,5 +91,44 @@
   display: -moz-box;
   display: -ms-box;
   display: box;
+}
+.fot-more-roate img {
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.fot-more-img {position: absolute;top:-1.5rem;left: 50%;transform: translateX(-50%);}
+.fot-more-img img{padding: 0.02rem;width: 2.5rem;height: 2.5rem;background: #fff; border-radius: 1.36rem;margin: 0 auto;-webkit-box-shadow: 0px -0.05rem 0.1rem #EEEEEE;box-shadow: 0px -0.05rem 0.1rem #EEEEEE;border-radius: 50%;}
+.fot-more-roate img{transform: rotate(45deg);-ms-transform: rotate(45deg);-moz-transform: rotate(45deg);-webkit-transform: rotate(45deg);-o-transform: rotate(45deg);}
+.nav-post {
+  position: fixed;
+  bottom: 3rem;
+  width:100%;
+  padding:.5rem;
+  background: #FFF;
+  /*border-bottom: 1px solid #F4F4F4;*/
+}
+.nav-list .nav-list-ul {
+  list-style-type: none;
+  width:100%;
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding:0;
+  margin:0;
+}
+.nav-list .nav-list-ul .nav-list-item {width:20%; padding:.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;}
+.nav-list .nav-list-ul .nav-list-item img {width: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 </style>

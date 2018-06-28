@@ -39,7 +39,7 @@
   import Carousel from '@/Pages/carousel'
   import FooterNav from '@/Pages/FooterNav'
     export default {
-        name: "index",
+      name: "index",
       components: {
           Carousel,
           FooterNav
@@ -77,11 +77,18 @@
   padding:0;
   margin:0;
 }
-.nav-list .nav-list-ul .nav-list-item {width:20%; padding:.5rem;}
+.nav-list .nav-list-ul .nav-list-item {width:20%; padding:.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;}
 .nav-list .nav-list-ul .nav-list-item img {width: 100%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  border-radius: 50%;}
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .article-group {padding:.5rem 0;background-color: #F4F4F4;}
 
 .article-group .article-list .img-list img{width:32%;}
